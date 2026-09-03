@@ -1,0 +1,56 @@
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-light);
+}
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-card-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card-icon {
+  font-size: 1.4rem;
+}
+
+.stat-card-body {
+  margin: var(--space-xs) 0;
+}
+
+.stat-card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-feature-settings: 'tnum';
+}
+
+.stat-card-footer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Variant Accents */
+.stat-card-primary { border-top: 3px solid var(--color-primary); }
+.stat-card-success { border-top: 3px solid var(--color-success); }
+.stat-card-warning { border-top: 3px solid var(--color-warning); }
+.stat-card-danger  { border-top: 3px solid var(--color-danger); }
+.stat-card-info    { border-top: 3px solid var(--color-info); }

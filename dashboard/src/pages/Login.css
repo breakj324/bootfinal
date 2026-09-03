@@ -1,0 +1,117 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, var(--color-surface-2) 0%, var(--color-bg) 70%);
+  padding: var(--space-md);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.login-header {
+  text-align: center;
+}
+
+.login-logo {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+.login-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin-top: var(--space-xs);
+}
+
+.login-alert {
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+}
+
+.login-alert.error {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px var(--space-md);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-glow);
+}
+
+.btn-login {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin-top: var(--space-sm);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-login:hover:not(:disabled) {
+  background: var(--color-primary-dim);
+  transform: translateY(-1px);
+}
+
+.btn-login:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-md);
+}

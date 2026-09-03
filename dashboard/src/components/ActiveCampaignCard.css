@@ -1,0 +1,166 @@
+.active-camp-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.active-camp-card.empty {
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+  border-style: dashed;
+}
+
+.empty-camp-content .empty-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+.empty-camp-content h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.empty-camp-content p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.camp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.camp-badge-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.camp-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.status-pill.status-active {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}
+
+.status-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.camp-promo-code {
+  text-align: right;
+}
+
+.promo-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.promo-val {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+/* Progress bar */
+.camp-progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.progress-title {
+  color: var(--text-secondary);
+}
+
+.progress-counts {
+  color: var(--text-primary);
+}
+
+.progress-bar-track {
+  height: 8px;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-info));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+/* Metrics grid */
+.camp-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.camp-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-val {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.metric-val.pending-color {
+  color: var(--color-warning);
+}
+
+.metric-val.remaining-color {
+  color: var(--color-success);
+}
