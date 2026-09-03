@@ -1,0 +1,48 @@
+services:
+  # ── Backend FastAPI API ──────────────────────────────────────────
+  - type: web
+    name: bootfinal-backend
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt && pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_TELEGRAM_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DASHBOARD_ORIGIN
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRATION_HOURS
+        value: "24"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+
+  # ── Telegram Bot Worker ──────────────────────────────────────────
+  - type: worker
+    name: bootfinal-bot
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_TELEGRAM_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.0"
